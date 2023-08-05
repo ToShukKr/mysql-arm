@@ -16,7 +16,7 @@ RUN wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.41.tar.gz && \
     tar -xvf mysql-5.7.41.tar.gz && \
     cd mysql-5.7.41 && \
     cmake . -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/tmp/boost && \
-    make -j8 && \
+    make -j$(nproc) && \
     make install && \
     ln -s /usr/local/mysql/bin/mysqld /usr/local/bin/mysqld && \
     chmod +x /usr/local/bin/mysqld && \
