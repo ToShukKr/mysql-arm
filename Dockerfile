@@ -6,7 +6,7 @@ RUN set -eux; \
 
 RUN apt update
 
-RUN apt install gosu pkg-config build-essential cmake libncurses5-dev bison g++ libssl-dev libffi-dev zlib1g-dev libncurses5-dev libreadline-dev wget default-mysql-client -y
+RUN apt install gosu pkg-config build-essential cmake libncurses5-dev bison g++ libssl-dev libffi-dev zlib1g-dev libncurses5-dev libreadline-dev libevent-dev libcurl4-openssl-dev wget default-mysql-client -y
 
 COPY my.cnf /etc/my.cnf
 
