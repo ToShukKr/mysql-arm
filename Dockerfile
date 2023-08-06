@@ -56,6 +56,8 @@ RUN set -eux; \
 	\
 	mysqld --version
 
+RUN rm -rf /tmp/*
+
 VOLUME /var/lib/mysql
 
 COPY docker-entrypoint.sh /usr/local/bin/
